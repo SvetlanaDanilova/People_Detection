@@ -23,9 +23,9 @@ This project implements object detection for recognizing people in a video file 
 ├── requirements.txt                      # Python dependencies
 ├── code/                                 # Directory containing all code
 |    ├── detect_people.py                 # Main script for detecting people in video
-|    ├── models/                          # Directory containing model-specific code
-|    |   ├── yolov8_inference.py          # YOLOv8 model implementation
-|    |   └── detectron2_inference.py      # Detectron2 model implementation
+|    └── models/                          # Directory containing model-specific code
+|        ├── yolov8_inference.py          # YOLOv8 model implementation
+|        └── detectron2_inference.py      # Detectron2 model implementation
 └── data/                                 # Directory with videos
     ├── input                             # Folder with input videos
     └── output                            # Folder for output videos
