@@ -24,6 +24,3 @@ WORKDIR /app
 
 # Задаем команду по умолчанию для запуска Python-скрипта
 ENTRYPOINT ["python", "code/detect_people.py"]
-
-# Передаем аргументы для скрипта (например, путь к видео и модель)
-CMD ["--input", "crowd.mp4", "--output", "output.mp4", "--model", "yolov8"]
