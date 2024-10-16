@@ -4,10 +4,10 @@ This project implements object detection for recognizing people in a video file 
 
 ## Features
 
-- Supports two detection algorithms: YOLOv8 and Detectron2.
-- Outputs a video with detected people and confidence scores.
-- Cross-platform support via Docker (Linux, MacOS, Windows).
-- Easy model selection via command line arguments.
+- Supports two detection algorithms: YOLOv8 and Detectron2
+- Outputs a video with detected people and confidence scores
+- Cross-platform support via Docker (Linux, MacOS, Windows)
+- Easy model selection via command line arguments
 
 ## Requirements
 
@@ -16,17 +16,26 @@ This project implements object detection for recognizing people in a video file 
 
 ## Project Structure
 
-.
 ├── Dockerfile                            # Docker configuration
+
 ├── README.md                             # Project documentation
+
 ├── requirements.txt                      # Python dependencies
+
 ├── code/                                 # Directory containing all code
+
 |    ├── detect_people.py                 # Main script for detecting people in video
+
 |    ├── models/                          # Directory containing model-specific code
+
 |    |   ├── yolov8_inference.py          # YOLOv8 model implementation
+
 |    |   └── detectron2_inference.py      # Detectron2 model implementation
+
 └── data/                                 # Directory with videos
+
     ├── input                             # Folder with input videos
+    
     └── output                            # Folder for output videos
 
 ## Setup
