@@ -7,6 +7,18 @@ from tqdm import tqdm
 import warnings
 warnings.filterwarnings("ignore")  # Suppress unnecessary warnings
 
+def get_default_video_path():
+    # Path to the folder with input videos
+    input_dir = "data/input/"
+    # Get a list of files with the .mp4 extension in this folder
+    mp4_files = [f for f in os.listdir(input_dir) if f.endswith(".mp4")]
+    # If there is at least one file, take the first one; otherwise, return an empty string
+    if mp4_files:
+        return os.path.join(input_dir, mp4_files[0])
+    else:
+        print(f"No .mp4 files found in {input_dir}")
+        return ""
+
 def get_detector(model_name, threshold):
     """
     Returns the appropriate object detection model based on the input model name.
@@ -94,7 +106,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Object Detection on video.")
     
     # Input video argument
-    parser.add_argument("--input", type=str, default="data/input/crowd.mp4", help="Path to the input video file")
+    default_video_path = get_default_video_path()
+    parser.add_argument("--input", type=str, default=default_video_path, help="Path to the input video file")
     
     # Output video argument
     parser.add_argument("--output", type=str, default="data/output/output_video.mp4", help="Path to save the output video")
