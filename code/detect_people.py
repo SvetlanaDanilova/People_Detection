@@ -108,11 +108,11 @@ if __name__ == "__main__":
     
     # Input video argument
     default_video_name = get_default_video_path()
-    default_input_video_path = os.path.join(data/input/, default_video_name)
+    default_input_video_path = os.path.join("data/input/", default_video_name)
     parser.add_argument("--input", type=str, default=default_video_path, help="Path to the input video file")
     
     # Output video argument
-    default_output_video_path = os.path.join(data/output/, default_video_name)
+    default_output_video_path = os.path.join("data/output/", default_video_name)
     parser.add_argument("--output", type=str, default=default_output_video_path, help="Path to save the output video")
     
     # Model selection argument (choices are yolov8 or detectron2)
