@@ -33,13 +33,6 @@ This project implements object detection for recognizing people in a video file 
 
 ## Setup
 
-### Clone the repository
-
-```
-git clone <repository-url>
-cd <repository-folder>
-```
-
 ### Build the Docker image
 
 ```
