@@ -16,35 +16,43 @@ This project implements object detection for recognizing people in a video file 
 
 ## Project Structure
 
+'''
 .
 ├── Dockerfile                            # Docker configuration
 ├── README.md                             # Project documentation
 ├── requirements.txt                      # Python dependencies
 ├── code/                                 # Directory containing all code
 |    ├── detect_people.py                 # Main script for detecting people in video
-|    ├── models/                          # Directory containing model-specific code
-|    |   ├── yolov8_inference.py          # YOLOv8 model implementation
-|    |   └── detectron2_inference.py      # Detectron2 model implementation
+|    └── models/                          # Directory containing model-specific code
+|        ├── yolov8_inference.py          # YOLOv8 model implementation
+|        └── detectron2_inference.py      # Detectron2 model implementation
 └── data/                                 # Directory with videos
     ├── input                             # Folder with input videos
     └── output                            # Folder for output videos
+'''
 
 ## Setup
 
 ### Clone the repository
 
+'''
 git clone <repository-url>
 cd <repository-folder>
+'''
 
 ### Build the Docker image
 
+'''
 docker build -t <your-docker-image-name> .
+'''
 
 ### Run the Docker container
 
 You can run the program by passing the path to input video file, the path to output video file, the name of model to use (yolov8 or detectron2) and threshold of confidence for model (from 0 to 1)
 
+'''
 docker run -it --rm -v "$(pwd)/data/output:/app/data/output" --name <your-docker-container-name> <your-docker-image-name> --input /data/input/<input-video-name>.mp4 --output /data/output/<output-video-name>.mp4 --model <yolov8-or-detectron2> --threshold <your-size-of-threshold>
+'''
 
 ### Output
 
