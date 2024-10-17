@@ -1,15 +1,15 @@
-# Для работы с YOLOv8
+# For working with YOLOv8
 ultralytics==8.0.69
 
-# Для работы с Detectron2
+# For working with Detectron2
 torch==1.13.1
 torchvision==0.14.1
 
-# OpenCV для работы с видео
+# OpenCV for video processing
 opencv-python==4.6.0.66
 
-# Материал для визуализации, если потребуется
+# Matplotlib for visualization (if needed)
 matplotlib==3.7.1
 
-# Библиотеки для поддержки и работы с различными форматами данных
+# Libraries for data support and working with various formats
 numpy==1.23.5
