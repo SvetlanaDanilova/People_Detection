@@ -37,6 +37,11 @@ This project implements object detection for recognizing people in a video file 
 
 ```
 git clone https://github.com/SvetlanaDanilova/People_Detection.git
+```
+
+### Go to repository folder
+
+```
 cd People_Detection
 ```
 
