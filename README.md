@@ -35,7 +35,13 @@ This project implements object detection for recognizing people in a video file 
 
 ### Clone this repository
 
-### Place the input video in mp4 format into data/input/ folder
+```
+git clone https://github.com/SvetlanaDanilova/People_Detection.git
+```
+
+### Add your video
+
+Place the input video in mp4 format into data/input/ folder
 
 ### Build the Docker image
 
