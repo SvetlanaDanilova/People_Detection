@@ -33,6 +33,10 @@ This project implements object detection for recognizing people in a video file 
 
 ## Setup
 
+### Open terminal
+
+For Windows use PowerShell, for Linux and MacOS use Terminal
+
 ### Clone this repository
 
 ```
