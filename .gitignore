@@ -1,2 +1,4 @@
 code/models/__pycache__
 *.pt
+/data/*
+!/data/.gitkeep
