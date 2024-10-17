@@ -15,7 +15,7 @@ def get_default_video_path():
     mp4_files = [f for f in os.listdir(input_dir) if f.endswith(".mp4")]
     # If there is at least one file, take the first one; otherwise, return an empty string
     if mp4_files:
-        return os.path.join(input_dir, mp4_files[0])
+        return mp4_files[0]
     else:
         print(f"No .mp4 files found in {input_dir}")
         return ""
@@ -107,11 +107,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Object Detection on video.")
     
     # Input video argument
-    default_video_path = get_default_video_path()
+    default_video_name = get_default_video_path()
+    default_input_video_path = os.path.join(data/input/, default_video_name)
     parser.add_argument("--input", type=str, default=default_video_path, help="Path to the input video file")
     
     # Output video argument
-    parser.add_argument("--output", type=str, default="data/output/output_video.mp4", help="Path to save the output video")
+    default_output_video_path = os.path.join(data/output/, default_video_name)
+    parser.add_argument("--output", type=str, default=default_output_video_path, help="Path to save the output video")
     
     # Model selection argument (choices are yolov8 or detectron2)
     parser.add_argument("--model", type=str, default="detectron2", choices=["yolov8", "detectron2"], help="Model to use: yolov8 or detectron2")
