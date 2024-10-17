@@ -63,6 +63,11 @@ You can run the program by passing the path to input video file, the path to out
 docker run -it --rm -v "$(pwd)/data/output:/app/data/output" --name <your-docker-container-name> <your-docker-image-name> --input /data/input/<input-video-name>.mp4 --output /data/output/<output-video-name>.mp4 --model <yolov8-or-detectron2> --threshold <your-size-of-threshold>
 ```
 
+Or you can run the programm with default parameters
+```
+docker run -it --rm -v "$(pwd)/data/output:/app/data/output" <your-docker-image-name>
+```
+
 ### Output
 
 After running the container, the resulting video with detected people and confidence scores will be saved in the output file you specified 
